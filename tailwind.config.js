@@ -17,7 +17,8 @@ export default {
                 'dark-green': '#1F271B',
                 'light-green': '#70877F',
                 'orange': '#EF946C',
-                'red': '#6D454C'
+                'red': '#6D454C',
+                'error-red': '#FF0000'
             }, 
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],

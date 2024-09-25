@@ -1,0 +1,25 @@
+<script setup lang="ts">
+    import { onMounted, ref } from 'vue';
+
+    const model = defineModel<number>();
+
+    const input = ref<HTMLInputElement | null>(null);
+
+    onMounted(() => {
+        if (input.value?.hasAttribute('autofocus')) {
+            input.value?.focus();
+        }
+    });
+
+    defineExpose({ focus: () => input.value?.focus() });
+</script>
+
+<template>
+    <input
+        class="border-gray-300 focus:border-light-green focus:ring-light-green rounded-md shadow-sm"
+        v-model="model"
+        type="number"
+        ref="input"
+        min="0"
+    />
+</template>
